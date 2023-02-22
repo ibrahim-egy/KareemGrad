@@ -263,10 +263,16 @@ body {
     html {
         font-size: 62.5%;
     }
+    .header {
+        margin-top: 8rem;
+    }
 }
 @media (max-width: 56.25em) {
     html {
         font-size: 50%;
+    }
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 37.5em) {
