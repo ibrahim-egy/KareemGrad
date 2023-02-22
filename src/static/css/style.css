@@ -146,6 +146,8 @@ body {
     transform: scale(0.95);
     background-color: var(--border-color);
     color: var(--hover-color);
+    border-color: var(--border-color);
+
 }
 .card > i {
     font-size: 3.5rem;
@@ -228,6 +230,19 @@ body {
 .result > * {
     margin: 0;
     padding: 1rem;
+}
+
+.scroll-up {
+    font-size: 3rem;
+    color: var(--text-color);
+    position: fixed;
+    bottom: 10rem;
+    right: 5rem;
+    display: none;
+}
+
+.scroll-up.display {
+    display: block;
 }
 
 #preload {

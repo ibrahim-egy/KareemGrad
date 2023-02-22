@@ -31,8 +31,21 @@
     display: flex;
     list-style: none;
 }
+.nav__link:link,
+.nav__link:visited {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35rem;
+}
+.nav__item:not(:last-child) {
+    margin-right: 2rem;
+}
 
-
+/*
 .nav__item {
     font-size: 1.3rem;
     position: relative;
@@ -44,15 +57,8 @@
 }
 .nav__item:hover {
     color: var(--hover-color) !important;
-    transform: scale(1.05);
 }
 
-.nav__item:not(:last-child) {
-    margin-right: 2rem;
-}
 
-.nav__link:link,
-.nav__link:visited {
-    text-decoration: none;
-    color: inherit;
-}
+
+*/

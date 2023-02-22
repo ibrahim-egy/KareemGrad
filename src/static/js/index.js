@@ -53,3 +53,21 @@ async function getResult() {
 }
 
 
+//Scroll up button functionality
+
+const scrollUpButton = document.querySelector('.scroll-up')
+scrollUpButton.addEventListener('click', ()=> {
+    window.scrollTo(0, 0);
+})
+
+
+window.addEventListener('scroll', ()=> {
+
+    if(window.scrollY >= 1000) {
+        scrollUpButton.classList.add('display')
+    } else {
+        scrollUpButton.classList.remove('display')
+
+    }
+})
+
