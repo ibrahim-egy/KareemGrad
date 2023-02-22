@@ -67,7 +67,6 @@ window.addEventListener('scroll', ()=> {
         scrollUpButton.classList.add('display')
     } else {
         scrollUpButton.classList.remove('display')
-
     }
 })
 

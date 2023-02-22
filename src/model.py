@@ -1,5 +1,4 @@
 import numpy as np
-from io import BytesIO
 from PIL import Image
 import tensorflow as tf
 
@@ -24,7 +23,7 @@ def class_detect(path):
     predictions = MODEL.predict(img_batch)
 
     predicted_class = str(CLASS_NAMES[np.argmax(predictions[0])])
-    confidence = np.max(predictions[0])*100
+    confidence = np.max(predictions[0]) * 100
     confidence = str("{:.2f}".format(confidence))
 
     data = {
@@ -32,3 +31,17 @@ def class_detect(path):
         "score": confidence
     }
     return data
+
+
+# def validate_image(image):
+#     image_type = imghdr.what(image)
+#
+#     if image_type != 'jpeg':
+#         if image_type is None:
+#             flash("That's not an Image.")
+#         else:
+#             flash(f"Sorry Cant Work With .{image_type}.")
+#             flash("Make Sure The Image Is In .jpg format.")
+#
+#         return False
+#     return True
