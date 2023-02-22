@@ -11,10 +11,11 @@ async function detect(e) {
     flipLoading()
 }
 
-updateUI = async (data) => {
+const updateUI = async (data) => {
     document.querySelector('.result').classList.add('display')
     document.querySelector('.result-class').innerHTML = data.class
     document.querySelector('.result-score').innerHTML = data.score + "%"
+    document.querySelector('.user-input-label').innerHTML = "Go Again <i class='fa-solid fa-upload'></i>"
 }
 
 const postDataFile = async (url='', data) => {

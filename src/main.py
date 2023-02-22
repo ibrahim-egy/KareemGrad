@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 from model import class_detect
 import os
 
@@ -15,9 +15,9 @@ def home():
 def detect():
     if request.method == "POST":
         image = request.files.get('image')
-        image.save(f"static/images/{image.filename}")
-        data = class_detect(f"static/images/{image.filename}")
-        os.remove(f"static/images/{image.filename}")
+        image.save(f"static/upload/{image.filename}")
+        data = class_detect(f"static/upload/{image.filename}")
+        os.remove(f"static/upload/{image.filename}")
         return data
 
 
